@@ -1,5 +1,5 @@
 :root {
-    --back:green;
+    --back:#61b876;
 }
 
 body {
@@ -29,4 +29,31 @@ h1 {
 
 main {
     background-color: var(--back);
+}
+
+#lodges {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px;
+}
+
+.lodgeBox {
+    min-width: 200px;
+    max-width: 400px;
+    border: solid black 2px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.lodgeImg {
+    /* object-fit: cover;
+    min-width: 200px;
+    max-width: 400px; */
+    overflow-clip-margin: content-box;
+    width: 100%;
+    height: 114px;
+    object-fit: cover;
 }
