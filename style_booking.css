@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+#goatHead {
+    max-height: 75px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+}
+
+header {
+    text-align: center;
+    color: white;
+    height: 200px;
+    background-image: url("./pictures/pasture_back.jpg");
+    background-position: 0% 95%;
+}
+
+h1 {
+    padding-top: 20px;
+    margin: 0;
+}
