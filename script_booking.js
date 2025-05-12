@@ -12,16 +12,39 @@ bfButton.addEventListener("click", () => {
     }
 
     filterBf();
+    fcolorBf();
 })
 
-function filterBF() {
+function filterBf() {
     if (bfFilter===0) {
         bfIndicator.forEach((p) => {
-            p.parentNode.style.display = "none"
+            p.parentNode.style.display = "block"
         })
     } else if (bfFilter===1) {
-        bfFilter = 2
+        bfIndicator.forEach((p) => {
+            if (p.textContent.includes("✓")) {
+                p.parentNode.style.display = "block"
+            } else {
+                p.parentNode.style.display = "none"
+            }
+        })
     } else {
-        bfFilter = 0
+        bfIndicator.forEach((p) => {
+            if (p.textContent.includes("✓")) {
+                p.parentNode.style.display = "none"
+            } else {
+                p.parentNode.style.display = "block"
+            }
+        })
+    }
+}
+
+function fcolorBf() {
+    if (bfFilter===0) {
+        bfButton.style.backgroundColor = "white";
+    } else if (bfFilter===1) {
+        bfButton.style.backgroundColor = "green";
+    } else {
+        bfButton.style.backgroundColor = "red";
     }
 }
