@@ -39,6 +39,10 @@ main {
     padding: 20px 30px 20px 30px;
 }
 
+#bfButton,#sheetButton {
+    background-color: white;
+}
+
 #lodges {
     display: flex;
     flex-direction: row;
