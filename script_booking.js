@@ -25,10 +25,10 @@ function buttonStyleCycle(button,filter) {
         button.querySelector(".circle").style.backgroundColor = "white";
         button.querySelector(".circle").style.left = `${(button.querySelector(".circle").offsetWidth)/2}px`;
     } else if (filter===1) {
-        button.querySelector(".circle").style.backgroundColor = "green";
+        button.querySelector(".circle").style.backgroundColor = "#B2FBA5";
         button.querySelector(".circle").style.left = `${(button.offsetWidth)/2}px`;
     } else {
-        button.querySelector(".circle").style.backgroundColor = "red";
+        button.querySelector(".circle").style.backgroundColor = "#FF746C";
         button.querySelector(".circle").style.left = `${button.offsetWidth-((button.querySelector(".circle").offsetWidth)/2)}px`;
     }
 }
