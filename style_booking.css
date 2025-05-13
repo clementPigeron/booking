@@ -1,7 +1,7 @@
 :root {
     --back:#61b876;
     --line:lightgray;
-    --hover-back: rgb(235, 235, 235);
+    --hover-back: rgb(239, 239, 239);
 }
 
 body {
@@ -105,15 +105,21 @@ main {
     transition: 0.3s ease-out;
 }
 
+.lodgeBox * {
+    transition: 0.3s ease-out;
+}
+
 .lodgeBox:hover {
     background-color: var(--hover-back);
+}
+.lodgeBox:hover .lodgeImg, .lodgeBox:hover .location {
     transform: translateY(-5px);
-    z-index: 0;
 }
 
 .lodgeBox:hover .location span {
     background-color: var(--hover-back);
     transition: 0.3s ease-out;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.242);
 }
 
 .lodgeImg {
@@ -125,8 +131,9 @@ main {
     height: 114px;
     object-fit: cover;
     border-radius: 20px;
+    position: relative;
     filter: drop-shadow(0 0 0.5rem rgb(133, 133, 133));
-    z-index: +1;
+    z-index: 3;
 }
 
 .lodgeBox p:not(.location) {
@@ -137,10 +144,12 @@ main {
     text-align: center;
     position: relative;
     margin: 5px 0 10px 0;
-    z-index: -1;
 }
 .location span {
+    position: relative;
     background-color: white;
+    transition: 0.3s ease-out;
+    z-index: 2;
 }
 
 .location:before {
@@ -152,7 +161,7 @@ main {
     background-color: var(--line);
     height: 1px;
     position: absolute;
-    z-index: -2;
+    z-index: 1;
 }
 .location:after {
     content: "";
@@ -163,7 +172,7 @@ main {
     background-color: var(--line);
     height: 1px;
     position: absolute;
-    z-index: -2;
+    z-index: 1;
 }
 
 .breakfast {
