@@ -10,23 +10,26 @@ let sheetFilter = 0
 
 bfButton.addEventListener("click", () => {
     bfFilter = filterValueCycle(bfFilter);
-    buttonColorCycle(bfButton,bfFilter);
+    buttonStyleCycle(bfButton,bfFilter);
     applyFilter();
 })
 
 sheetButton.addEventListener("click", () => {
     sheetFilter = filterValueCycle(sheetFilter);
-    buttonColorCycle(sheetButton,sheetFilter);
+    buttonStyleCycle(sheetButton,sheetFilter);
     applyFilter();
 })
 
-function buttonColorCycle(button,filter) {
+function buttonStyleCycle(button,filter) {
     if (filter===0) {
-        button.style.backgroundColor = "white";
+        button.querySelector(".circle").style.backgroundColor = "white";
+        button.querySelector(".circle").style.left = `${(button.querySelector(".circle").offsetWidth)/2}px`;
     } else if (filter===1) {
-        button.style.backgroundColor = "green";
+        button.querySelector(".circle").style.backgroundColor = "green";
+        button.querySelector(".circle").style.left = `${(button.offsetWidth)/2}px`;
     } else {
-        button.style.backgroundColor = "red";
+        button.querySelector(".circle").style.backgroundColor = "red";
+        button.querySelector(".circle").style.left = `${button.offsetWidth-((button.querySelector(".circle").offsetWidth)/2)}px`;
     }
 }
 

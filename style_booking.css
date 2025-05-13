@@ -1,5 +1,7 @@
 :root {
     --back:#61b876;
+    --line:lightgray;
+    --hover-back: rgb(235, 235, 235);
 }
 
 body {
@@ -39,8 +41,41 @@ main {
     padding: 20px 30px 20px 30px;
 }
 
-#bfButton,#sheetButton {
+.filterButton {
+    position: relative;
+    background-color: lightgray;
+    border: none;
+    width: 70px;
+    height: 30px;
+    padding: 0;
+    border-radius: 30px;
+    transition: 0.3s ease-out;
+}
+
+.circle {
+    position: absolute;
+    left: 14px;
+    transform: translate(-50%,-50%);
+    height: 28px;
+    width: 28px;
     background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* margin-left: 0;
+    margin-right: 100%; */
+    transition: 0.3s ease-out;
+}
+
+.logo {
+    transform: scale(0.8);
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(0);
 }
 
 #lodges {
@@ -64,8 +99,14 @@ main {
 }
 
 .lodgeBox:hover {
-    background-color: rgb(235, 235, 235);
+    background-color: var(--hover-back);
     transform: translateY(-5px);
+    z-index: 0;
+}
+
+.lodgeBox:hover .location span {
+    background-color: var(--hover-back);
+    transition: 0.3s ease-out;
 }
 
 .lodgeImg {
@@ -77,10 +118,54 @@ main {
     height: 114px;
     object-fit: cover;
     border-radius: 20px;
+    filter: drop-shadow(0 0 0.5rem rgb(133, 133, 133));
+    z-index: +1;
+}
+
+.lodgeBox p:not(.location) {
+    margin: 0;
+}
+
+.location {
+    text-align: center;
+    position: relative;
+    margin: 5px 0 10px 0;
+    z-index: -1;
+}
+.location span {
+    background-color: white;
+}
+
+.location:before {
+    content: "";
+    display: block;
+    width: 45%;
+    left: 0;
+    top: 50%;
+    background-color: var(--line);
+    height: 1px;
+    position: absolute;
+    z-index: -2;
+}
+.location:after {
+    content: "";
+    display: block;
+    width: 45%;
+    right: 0;
+    top: 50%;
+    background-color: var(--line);
+    height: 1px;
+    position: absolute;
+    z-index: -2;
 }
 
 .breakfast {
     float: right;
+    width: 50%;
+}
+.sheet {
+    float: left;
+    width: 50%;
 }
 
 #outro {
