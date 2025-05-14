@@ -1,7 +1,8 @@
 :root {
     --back:#61b876;
     --line:lightgray;
-    --hover-back: rgb(239, 239, 239);
+    --lodges-back: rgb(238, 238, 238);
+    --hover-back: rgb(255, 255, 255);
 }
 
 body {
@@ -30,17 +31,18 @@ h1 {
 }
 
 .titleLetter:hover {
-    font-size: larger;
-    transition: 1s ease-out;
+    font-size: 50px;
+    transition: 0.7s ease-out;
 }
 .titleLetter {
-    transition: 1s ease-out;
+    transition: 0.5s ease-out;
 }
 
 main {
     background-color: white;
     border-radius: 30px 30px 0 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:  "Roboto", sans-serif;
+    font-weight: 500;
 }
 
 #intro {
@@ -93,6 +95,7 @@ main {
     gap: 30px;
     padding: 30px;
     background: linear-gradient(0deg,rgb(219, 219, 219) 0%, rgba(255, 255, 255, 0) 3%, rgba(255, 255, 255, 0) 97%, rgb(219, 219, 219) 100%);
+    background-color: var(--lodges-back);
 
 }
 
@@ -112,14 +115,13 @@ main {
 .lodgeBox:hover {
     background-color: var(--hover-back);
 }
-.lodgeBox:hover .lodgeImg, .lodgeBox:hover .location {
+.lodgeBox:hover /*.lodgeImg, .lodgeBox:hover .location*/ {
     transform: translateY(-5px);
 }
 
 .lodgeBox:hover .location span {
     background-color: var(--hover-back);
     transition: 0.3s ease-out;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.242);
 }
 
 .lodgeImg {
@@ -136,6 +138,10 @@ main {
     z-index: 3;
 }
 
+#alpesImg {
+    object-position: right 70%;
+}
+
 .lodgeBox p:not(.location) {
     margin: 0;
 }
@@ -147,9 +153,8 @@ main {
 }
 .location span {
     position: relative;
-    background-color: white;
+    background-color: var(--lodges-back);
     transition: 0.3s ease-out;
-    font-weight: bold;
     z-index: 2;
 }
 
