@@ -23,13 +23,13 @@ sheetButton.addEventListener("click", () => {
 function buttonStyleCycle(button,filter) {
     if (filter===0) {
         button.querySelector(".circle").style.backgroundColor = "white";
-        button.querySelector(".circle").style.left = `${(button.querySelector(".circle").offsetWidth)/2}px`;
+        button.querySelector(".circle").style.left = `${((button.querySelector(".circle").offsetWidth)/2)-2}px`;
     } else if (filter===1) {
         button.querySelector(".circle").style.backgroundColor = "#B2FBA5";
-        button.querySelector(".circle").style.left = `${(button.offsetWidth)/2}px`;
+        button.querySelector(".circle").style.left = `${((button.offsetWidth)/2)-2}px`;
     } else {
         button.querySelector(".circle").style.backgroundColor = "#FF746C";
-        button.querySelector(".circle").style.left = `${button.offsetWidth-((button.querySelector(".circle").offsetWidth)/2)}px`;
+        button.querySelector(".circle").style.left = `${(button.offsetWidth-((button.querySelector(".circle").offsetWidth)/2))-2}px`;
     }
 }
 
