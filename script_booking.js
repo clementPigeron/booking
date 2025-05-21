@@ -96,15 +96,18 @@ function displayList(listName) {
     //     boxContainer.style.display = "flex"
     // }
     
-    let previousList = document.getElementById(`list${previousListName}`)
+    const previousList = document.getElementById(`list${previousListName}`)
     previousList.style.display = "none"
     // previousList.style.opacity = "0"
-    // previousList.classList.remove("animated")
+
+    const previousSelector = document.getElementById(`selector${previousListName}`)
+    previousSelector.classList.remove("active")
     
-    let box = document.getElementById(`list${listName}`)
-    box.style.display = "grid"
-    // box.style.opacity = "1"
-    // box.classList.add("animated")
+    const list = document.getElementById(`list${listName}`)
+    list.style.display = "grid"
+    // list.style.opacity = "1"
+    const selector = document.getElementById(`selector${listName}`)
+    selector.classList.add("active")
 
     previousListName = listName
 }

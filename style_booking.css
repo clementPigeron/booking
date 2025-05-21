@@ -227,18 +227,25 @@ main {
     margin: 20px 0 20px 0;
 }
 
-#activitiesBar .activitySelector:not(:first-child):not(:last-child) {
-    margin: 0 20px 0 20px;
+#activitiesBar .activitySelector:not(:last-child) {
+    margin-right: 20px;
 }
 
 .activitySelector {
     cursor: pointer;
+    transition: 0.3s ease-out;
+}
+.activitySelector.active {
+    text-decoration: underline;
+    text-decoration-thickness: .3ex;
+    text-decoration-color: green;
+    transition: 0.3s ease-out;
 }
 
 #activities {
     background: linear-gradient(0deg, rgb(219, 219, 219) 0%, rgba(255, 255, 255, 0) 3%, rgba(255, 255, 255, 0) 97%, rgb(219, 219, 219) 100%);
     background-color: var(--lodges-back);
-    max-width: 900px;
+    max-width: 950px;
     border-radius: 20px;
 }
 
