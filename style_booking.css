@@ -34,6 +34,7 @@ h1 {
 }
 .titleLetter {
     transition: 0.5s ease-out;
+    vertical-align: middle;
 }
 
 main {
@@ -205,8 +206,17 @@ main {
     width: 50%;
 }
 
-#outro {
+#activitiesIdeas {
     padding: 20px 30px 20px 30px;
+}
+
+.activitySelector {
+    cursor: pointer;
+}
+
+#activities {
+    background: linear-gradient(0deg,rgb(219, 219, 219) 0%, rgba(255, 255, 255, 0) 3%, rgba(255, 255, 255, 0) 97%, rgb(219, 219, 219) 100%);
+    background-color: var(--lodges-back);
 }
 
 @media (max-width:1100px) {
