@@ -95,24 +95,36 @@
         <div id="activitiesIdeas">
             Activités<br>
             <div id="activitiesBar">
-                <a class="activitySelector" id="activityMontagne">Montagne</a>
-                <a class="activitySelector" id="activityPlage">Plage</a>
-                <a class="activitySelector" id="activityCampagne">Campagne</a>
+                <a class="activitySelector" id="selectorMontagne">Montagne</a>
+                <a class="activitySelector" id="selectorPlage">Plage</a>
+                <a class="activitySelector" id="selectorCampagne">Campagne</a>
             </div>
             <div id="activities">
                 <div class="activitiesList" id="listMontagne">
-                    <div class="activityBox activityMontagne">Escalade</div>
-                    <div class="activityBox activityMontagne">Rafting</div>
-                    <div class="activityBox activityMontagne">Camping</div>
-                    <div class="activityBox activityMontagne">VTT</div>
+                    <div class="activityBox activityMontagne">
+                        <img class="activityImg" src="./pictures/activities/climbing.jpg">
+                        <p class="location"><span>&nbsp;Escalade&nbsp;</span></p>
+                    </div>
+                    <div class="activityBox activityMontagne">
+                        <img class="activityImg" src="./pictures/activities/rafting.jpg">
+                        <p class="location"><span>&nbsp;Rafting&nbsp;</span></p>
+                    </div>
+                    <div class="activityBox activityMontagne">
+                        <img class="activityImg" src="./pictures/activities/camping.jpg">
+                        <p class="location"><span>&nbsp;Camping&nbsp;</span></p>
+                    </div>
+                    <div class="activityBox activityMontagne">
+                        <img class="activityImg" src="./pictures/activities/VTT.jpg">
+                        <p class="location"><span>&nbsp;VTT&nbsp;</span></p>
+                    </div>
                 </div>
-                <div class="activitiesList" id="listCampagne">
+                <div class="activitiesList" id="listCampagne" style="display:none">
                     <div class="activityBox activityCampagne">Randonnée</div>
                     <div class="activityBox activityCampagne">Pique-nique</div>
                     <div class="activityBox activityCampagne">Observation des étoiles</div>
                     <div class="activityBox activityCampagne">Atelier poterie</div>
                 </div>
-                <div class="activitiesList" id="listPlage">
+                <div class="activitiesList" id="listPlage" style="display:none">
                     <div class="activityBox activityPlage">Baignade</div>
                     <div class="activityBox activityPlage">Bronzage</div>
                     <div class="activityBox activityPlage">Plongée</div>

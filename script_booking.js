@@ -4,9 +4,11 @@ const sheetButton = document.getElementById("sheetButton")
 const lodgeBox = document.querySelectorAll(".lodgeBox")
 const bfIndicator = document.querySelectorAll(".breakfast")
 const sheetIndicator = document.querySelectorAll(".sheet")
+const activitySelector = document.querySelectorAll(".activitySelector")
 
 let bfFilter = 0
 let sheetFilter = 0
+let previousListName = "Montagne"
 
 bfButton.addEventListener("click", () => {
     bfFilter = filterValueCycle(bfFilter);
@@ -19,6 +21,15 @@ sheetButton.addEventListener("click", () => {
     buttonStyleCycle(sheetButton,sheetFilter);
     applyFilter();
 })
+
+activitySelector.forEach(
+    (link) => {
+        link.addEventListener("click", () => {
+            const linkid = link.id
+            displayList(linkid.split("selector").pop())
+        })
+    }
+)
 
 function buttonStyleCycle(button,filter) {
     if (filter===0) {
@@ -76,4 +87,24 @@ function applyFilter() {
             }
         })
     }
+}
+
+function displayList(listName) {
+    // const boxContainer = document.getElementById("boxContainer")
+
+    // if (boxContainer.style.display==="none") {
+    //     boxContainer.style.display = "flex"
+    // }
+    
+    let previousList = document.getElementById(`list${previousListName}`)
+    previousList.style.display = "none"
+    // previousList.style.opacity = "0"
+    // previousList.classList.remove("animated")
+    
+    let box = document.getElementById(`list${listName}`)
+    box.style.display = "grid"
+    // box.style.opacity = "1"
+    // box.classList.add("animated")
+
+    previousListName = listName
 }

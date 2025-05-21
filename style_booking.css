@@ -217,7 +217,31 @@ main {
 #activities {
     background: linear-gradient(0deg,rgb(219, 219, 219) 0%, rgba(255, 255, 255, 0) 3%, rgba(255, 255, 255, 0) 97%, rgb(219, 219, 219) 100%);
     background-color: var(--lodges-back);
+    max-width: 900px;
+    border-radius: 20px;
 }
+
+.activitiesList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 30px;
+}
+
+.activityImg {
+    /* object-fit: cover;
+    min-width: 200px;
+    max-width: 400px; */
+    margin: 4%;
+    width: 92%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    filter: drop-shadow(0 0 0.5rem rgb(133, 133, 133));
+    z-index: 3;
+}
+
 
 @media (max-width:1100px) {
     #lodges {
