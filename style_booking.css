@@ -1,6 +1,6 @@
 :root {
-    --back:#61b876;
-    --line:lightgray;
+    --back: #61b876;
+    --line: lightgray;
     --lodges-back: rgb(238, 238, 238);
     --hover-back: rgb(255, 255, 255);
 }
@@ -17,7 +17,7 @@ body {
 header {
     text-align: center;
     height: 160px;
-    background: linear-gradient(0deg,rgb(219, 219, 219) 0%, rgba(255, 255, 255, 0) 30%);
+    background: linear-gradient(0deg, rgb(219, 219, 219) 0%, rgba(255, 255, 255, 0) 30%);
 }
 
 h1 {
@@ -28,10 +28,16 @@ h1 {
     margin: 0;
 }
 
+h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 .titleLetter:hover {
     font-size: 50px;
     transition: 0.7s ease-out;
 }
+
 .titleLetter {
     transition: 0.5s ease-out;
     vertical-align: middle;
@@ -41,7 +47,7 @@ main {
     background-color: white;
     border-radius: 30px 30px 0 0;
     overflow: hidden;
-    font-family:  "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     transform: translateY(-30px);
 }
@@ -75,7 +81,7 @@ main {
 .circle {
     position: absolute;
     left: 12px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 28px;
     width: 28px;
     background-color: white;
@@ -109,7 +115,7 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding: 30px;
-    background: linear-gradient(0deg,rgb(219, 219, 219) 0%, rgba(255, 255, 255, 0) 3%, rgba(255, 255, 255, 0) 97%, rgb(219, 219, 219) 100%);
+    background: linear-gradient(0deg, rgb(219, 219, 219) 0%, rgba(255, 255, 255, 0) 3%, rgba(255, 255, 255, 0) 97%, rgb(219, 219, 219) 100%);
     background-color: var(--lodges-back);
 
 }
@@ -130,7 +136,11 @@ main {
 .lodgeBox:hover {
     background-color: var(--hover-back);
 }
-.lodgeBox:hover /*.lodgeImg, .lodgeBox:hover .location*/ {
+
+.lodgeBox:hover
+
+/*.lodgeImg, .lodgeBox:hover .location*/
+    {
     transform: translateY(-5px);
 }
 
@@ -166,6 +176,7 @@ main {
     position: relative;
     margin: 0px 5px 10px 5px;
 }
+
 .location span {
     position: relative;
     background-color: var(--lodges-back);
@@ -184,6 +195,7 @@ main {
     position: absolute;
     z-index: 1;
 }
+
 .location:after {
     content: "";
     display: block;
@@ -200,6 +212,7 @@ main {
     float: right;
     width: 50%;
 }
+
 .sheet {
     transform: translateX(10px);
     float: left;
@@ -211,11 +224,11 @@ main {
 }
 
 #activitiesBar {
-    margin: 20px 0 20px 0; 
+    margin: 20px 0 20px 0;
 }
 
-#activitiesBar  .activitySelector:not(:first-child):not(:last-child){
-    margin: 0 20px 0 20px; 
+#activitiesBar .activitySelector:not(:first-child):not(:last-child) {
+    margin: 0 20px 0 20px;
 }
 
 .activitySelector {
@@ -223,7 +236,7 @@ main {
 }
 
 #activities {
-    background: linear-gradient(0deg,rgb(219, 219, 219) 0%, rgba(255, 255, 255, 0) 3%, rgba(255, 255, 255, 0) 97%, rgb(219, 219, 219) 100%);
+    background: linear-gradient(0deg, rgb(219, 219, 219) 0%, rgba(255, 255, 255, 0) 3%, rgba(255, 255, 255, 0) 97%, rgb(219, 219, 219) 100%);
     background-color: var(--lodges-back);
     max-width: 900px;
     border-radius: 20px;
@@ -266,7 +279,11 @@ main {
 .activityBox:hover {
     background-color: var(--hover-back);
 }
-.activityBox:hover /*.lodgeImg, .activityBox:hover .location*/ {
+
+.activityBox:hover
+
+/*.lodgeImg, .activityBox:hover .location*/
+    {
     transform: translateY(-5px);
 }
 
@@ -281,24 +298,29 @@ main {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media (max-width:900px) {
     #lodges {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width:750px) {
     .activitiesList {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width:600px) {
     #lodges {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .activitiesList {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .activityImg {
-    height: 114px;
-}
+        height: 114px;
+    }
 }
